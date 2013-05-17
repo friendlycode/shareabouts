@@ -9,7 +9,7 @@
 
 body, select, input, textarea {
 /*  color: #000;*/
-/*  font-family: "Comic Sans MS", cursive, sans-serif;*/
+  font-family: "Open Sans", sans-serif;
 }
 
 
@@ -50,7 +50,7 @@ a:hover {
  * as to not break it scaling via media queries. */
 
 #site-title {
-/*  font-family: Impact, sans-serif;*/
+  font-family: "Open Sans", sans-serif;
 /*  color: #fff;*/
 /*  text-shadow: none;*/
 }
@@ -262,6 +262,32 @@ ul.recent-points {
   opacity: 0.7;
 }
 
+/* =Invervention List
+-------------------------------------------------------------- */
+
+#interventions {
+  padding: 20px 0;
+}
+
+.intervention {
+  width: 350px;
+  padding: 5px;
+  display: inline-block;
+}
+
+.intervention a {
+  color: #444;
+  text-decoration: none;
+}
+
+.intervention img {
+  float: left;
+}
+
+article p {
+  font-size: 16px;
+}
+
 /* =Media Queries
 -------------------------------------------------------------- */
 
@@ -302,7 +328,13 @@ ul.recent-points {
 }
 
 @media only screen and (min-width: 1024px) { /* ticker is visible */
+  .access li {
+    font-size: 0.75em;
+  }
 }
 
 @media only screen and (min-width: 1300px) {
+  .access li {
+    font-size: 1em;
+  }
 }

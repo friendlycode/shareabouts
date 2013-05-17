@@ -1,11 +1,11 @@
 # Settings for the app
 app:
   # HTML Title
-  title: re:Envision
+  title: re//VISION
   # Header name
-  name: re:Envision – Better Block GR
+  name: re//VISION
   # Meta description that will show up in Google search results
-  meta_description: _(re:State – Better Block Grand Rapids. Envision the future of Grand Rapids.)
+  meta_description: _(re//VISION – Better Block Grand Rapids. Envision the future of Grand Rapids.)
 
 # Settings for map and layer configs
 map:
@@ -26,18 +26,47 @@ map:
 # The keys show up in the dropdown list when you are adding a new place
 # The values map the place type to map icons (defined below).
 place_types:
-  parklet:
-    default: blue
-    focused: red
-    label: _(Parklet)
-  bike_corral:
-    default: blue
-    focused: red
-    label: _(Bike Corral)
   rain_garden:
     default: blue
     focused: red
     label: _(Rain Garden)
+  green_street:
+    default: blue
+    focused: red
+    label: _(Green Street)
+  urban_garden:
+    default: blue
+    focused: red
+    label: _(Urban Garden)
+  bike_rental:
+    default: blue
+    focused: red
+    label: _(Bike Rental)
+  two_way_bike_lane:
+    default: blue
+    focused: red
+    label: _(Two-way Bike Lanes)
+  parklet:
+    default: blue
+    focused: red
+    label: _(Bike Rental)
+  food_truck_pod:
+    default: blue
+    focused: red
+    label: _(Food Truck Pod)
+  bouquinistes:
+    default: blue
+    focused: red
+    label: _(Bouquinistes)
+  work_yard:
+    default: blue
+    focused: red
+    label: _(Work Yard)
+  library:
+    default: blue
+    focused: red
+    label: _(Bus Stop Library)
+
 
 # Defines place icons. See http://leaflet.cloudmade.com/reference.html#icon
 # for documention of each property. Any omitted property will be undefined.
@@ -72,29 +101,43 @@ activity:
 
 place:
   adding_supported: true
-  add_button_label: _(Add a Place)
-  action_text: _(added)
-  title: _(Tell us more...)
+  add_button_label: _(Build Here!)
+  action_text: _(built)
+  title: _(Build a Better Grand Rapids)
   action_text: _(created)
-  anonymous_name: _(Someone)
-  submit_button_label: _(Submit)
+  anonymous_name: _(A Grand Rapidian)
+  submit_button_label: _(Build It!)
   items:
+    - prompt: _(What do you want to build here?)
+      type: select
+      name: location_type
+      options:
+        - label: _(re//Purpose – Green Street)
+          value: green_street
+        - label: _(re//Seed – Urban Gardening)
+          value: urban_garden
+        - label: _(re//Cycle – Bike Rental)
+          value: bike_rental
+        - label: _(re//Configure – 2-way Bike Lanes)
+          value: two_way_bike_lane
+        - label: _(re//Define – Parklets)
+          value: parklet
+        - label: _(re//Fuel – Food Truck Pod)
+          value: food_truck_pod
+        - label: _(re//Gift – Bouquinistes)
+          value: bouquiniste
+        - label: _(re//Play – Work Yard)
+          value: work_yard
+        - label: _(re//Cover – Urban Tree Canopy)
+          value: tree_canopy
+        - label: _(re//Read – Bus Stop Library)
+          value: library
     - prompt: _(Why Here?)
       type: textarea
-      name: why
+      name: why_here
       attrs:
         - key: placeholder
           value: _(Why Here?)
-    - prompt: _(Location Type)
-      type: select
-      options:
-        - label: _(Parklet)
-          value: parklet
-        - label: _(Bike Corral)
-          value: bike_corral
-        - label: _(Rain Garden)
-          value: rain_garden
-      name: location_type
     - prompt: _(Image)
       inputfile_label: _(Add an Image)
       type: file
@@ -122,7 +165,7 @@ survey:
   response_name: _(comment)
   response_plural_name: _(comments)
   action_text: _(commented on)
-  anonymous_name: _(Someone)
+  anonymous_name: _(A Grand Rapidian)
 
   # Survey form config
   title: _(Leave a Comment)
@@ -139,24 +182,52 @@ survey:
 
 support:
   submission_type: support
-  submit_btn_text: _(Support This!)
+  submit_btn_text: _(Support This)
   action_text: supported
   anonymous_name: _(A Grand Rapidian)
 
 pages:
   - title: _(About)
     slug: about
-    name: overview
+    name: about
     start_page: true
 
-  - title: _(Infrastracture)
-    slug: infrastracture
-    url: /static/pages/infrastracture.html
+  - title: _(re//PURPOSE)
+    slug: repurpose
+    name: repurpose
 
-  - title: _(Help)
-    slug: help
-    url: /static/pages/help.html
+  - title: _(re//SEED)
+    slug: reseed
+    name: reseed
 
-  - title: _(re:State)
+  - title: _(re//CYCLE)
+    slug: recycle
+    name: recycle
+
+  - title: _(re//DEFINE)
+    slug: redefine
+    name: redefine
+
+  - title: _(re//FUEL)
+    slug: refuel
+    name: refuel
+
+  - title: _(re//GIFT)
+    slug: regift
+    name: regift
+
+  - title: _(re//PLAY)
+    slug: replay
+    name: replay
+
+  - title: _(re//COVER)
+    slug: recover
+    name: recover
+
+  - title: _(re//READ)
+    slug: reread
+    name: reread
+
+  - title: _(re//STATE)
     external: true
     url: http://betterblockgr.com
